@@ -1,6 +1,12 @@
 public class Schedule {
     public static void main(String[] args) {
-
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number of classes: ");
+        int numClasses = scan.nextInt();
+        scan.nextLine();
+        System.out.print("Enter this schedule's owner's name: ");
+        String owner = scan.nextLine();
+        
     }
     public static String[] generateSchedule(String[] subjectList, int numClasses) {
         String[] schedule = new String[numClasses];
@@ -32,7 +38,6 @@ public class Schedule {
         int[] difficultyArray2 = computeDifficulties(schedule2, subjectList);
         int difficulty1 = 0;
         int difficulty2 = 0;
-        int[] difficulties = new int[2]; 
         for (int i = 0; i < difficultyArray1.length; i++) {
             difficulty1 += difficultyArray1[i];
         }   
